@@ -1,0 +1,13 @@
+<section class="artistpage">
+    <div>
+      <h3>Filter by name</h3>
+      <input type="text" ng-model="querry" placeholder="search for artists" autofocus>
+    </div>
+    <ul class="artistlist">
+      <li class="artist" ng-repeat="item in artists | filter: querry | orderBy: item.reknown">
+        <img ng-src="images/angular/{{item.shortname}}_tn.jpg" alt="xxxxx">
+        <h4>{{item.name | uppercase}}</h4>
+        <p>{{item.reknown}}</p>
+      </li>
+    </ul>
+</section>
